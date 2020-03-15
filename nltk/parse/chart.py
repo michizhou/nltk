@@ -676,7 +676,7 @@ class Chart(object):
         Return an iterator of the complete tree structures that span
         the entire chart, and whose root node is ``root``.
         """
-        for edge in self.select(start=0, end=self._num_leaves, lhs=root):
+        for edge in self.select(start=0, end=self._num_leaves):
             for tree in self.trees(edge, tree_class=tree_class, complete=True):
                 yield tree
 
